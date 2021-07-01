@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+    <a class="navbar-brand" routerLink="/"> Pontus Sidlo </a>
+    <div class="hidden"></div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarNav"
+            aria-current="page"
+            routerLinkActive="router-link-active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLink="/"
+            >Start</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarNav"
+            aria-current="page"
+            routerLink="/digitalcv"
+            routerLinkActive="router-link-active"
+            >Digital CV</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarNav"
+            aria-current="page"
+            routerLink="/contact"
+            routerLinkActive="router-link-active"
+            >Contact Me</a
+          >
+        </li>
+        <li
+          class="nav-item hiddenArrow"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarNav"
+        >
+          <i class="fas fa-chevron-down nav-link active"></i>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

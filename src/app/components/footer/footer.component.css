@@ -1,0 +1,19 @@
+footer {
+  background-color: #333;
+  height: 71px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+i {
+  color: #fff;
+  font-size: 36px;
+}
+.link {
+  padding: 0.5rem 0.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+a.link {
+  cursor: pointer;
+}
