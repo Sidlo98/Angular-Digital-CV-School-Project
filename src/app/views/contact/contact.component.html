@@ -1,1 +1,100 @@
-<p>contact works!</p>
+<form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <h3 class="form-title">Contact Me</h3>
+
+  <label for="name" class="form-label">Name:</label>
+  <input
+    type="text"
+    id="name"
+    formControlName="name"
+    class="form-control"
+    [class.is-valid]="name.valid && (name.dirty || name.touched)"
+    [class.is-invalid]="name.invalid && (name.dirty || name.touched)"
+  />
+  <small *ngIf="name.errors?.required && (name.touched || name.touched)"
+    ><i class="fas fa-info-circle"></i>You need a name</small
+  >
+  <small *ngIf="name.errors?.minlength && (name.touched || name.touched)"
+    ><i class="fas fa-info-circle"></i>Your name needs to be atleast 2
+    characters long</small
+  >
+
+  <br />
+
+  <label for="email" class="form-label">Email:</label>
+  <input
+    type="email"
+    id="email"
+    formControlName="email"
+    class="form-control"
+    [class.is-valid]="email.valid && (email.dirty || email.touched)"
+    [class.is-invalid]="email.invalid && (email.dirty || email.touched)"
+  />
+  <small *ngIf="email.errors?.required && (email.touched || email.touched)"
+    ><i class="fas fa-info-circle"></i>You need a email address</small
+  >
+  <small *ngIf="email.errors?.email && (email.touched || email.touched)"
+    ><i class="fas fa-info-circle"></i>Your email need to be a valid one</small
+  >
+
+  <br />
+  <label for="company" class="form-label">Company:</label>
+  <input
+    type="text"
+    id="company"
+    formControlName="company"
+    class="form-control"
+    [class.is-valid]="company.valid && (company.dirty || company.touched)"
+    [class.is-invalid]="company.invalid && (company.dirty || company.touched)"
+  />
+  <small
+    *ngIf="company.errors?.required && (company.touched || company.touched)"
+    ><i class="fas fa-info-circle"></i>You need a Company</small
+  >
+  <small
+    *ngIf="company.errors?.minlength && (company.touched || company.touched)"
+    ><i class="fas fa-info-circle"></i>Your company need to be atleast 3
+    characters long</small
+  >
+
+  <br />
+  <label for="subject" class="form-label">Subject:</label>
+  <input
+    type="text"
+    id="subject"
+    formControlName="subject"
+    class="form-control"
+    [class.is-valid]="subject.valid && (subject.dirty || subject.touched)"
+    [class.is-invalid]="subject.invalid && (subject.dirty || subject.touched)"
+  />
+  <small
+    *ngIf="subject.errors?.required && (subject.touched || subject.touched)"
+    ><i class="fas fa-info-circle"></i>You need a Subject</small
+  >
+  <small
+    *ngIf="subject.errors?.minlength && (subject.touched || subject.touched)"
+    ><i class="fas fa-info-circle"></i>Your subject must be atleast 5 characters
+    long</small
+  >
+  <br />
+
+  <label for="message" class="form-label">Message:</label>
+  <textarea
+    type="text"
+    id="message"
+    formControlName="message"
+    class="form-control"
+    [class.is-valid]="message.valid && (message.dirty || message.touched)"
+    [class.is-invalid]="message.invalid && (message.dirty || message.touched)"
+  ></textarea>
+  <small
+    *ngIf="message.errors?.required && (message.touched || message.touched)"
+    ><i class="fas fa-info-circle"></i>You need a Message</small
+  >
+  <small
+    *ngIf="message.errors?.minlength && (message.touched || message.touched)"
+    ><i class="fas fa-info-circle"></i>Your message mus be atleast 20 characters
+    long</small
+  >
+
+  <button class="btn form-btn btn-block">Send</button>
+</form>

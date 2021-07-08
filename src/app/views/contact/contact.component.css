@@ -1,0 +1,44 @@
+.form {
+  padding: 2rem;
+}
+
+.form-title {
+  color: #fff;
+  font-size: 24px !important;
+  font-weight: 500 !important;
+  text-align: center;
+}
+
+.form label {
+  color: #fff;
+  font-size: 20px !important;
+}
+
+.form input {
+  margin-bottom: 0rem;
+  background-color: #c4c4c4;
+}
+
+.form textarea {
+  height: 200px;
+  background-color: #c4c4c4;
+}
+
+.form-btn {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  background-color: rgb(19, 70, 40);
+  margin-top: 2rem;
+  color: #fff;
+}
+
+.form small {
+  font-size: 16px !important;
+  padding: 0.3rem;
+  color: rgb(255, 255, 255);
+}
+
+.form small i {
+  color: red;
+  margin-right: 0.5rem;
+}

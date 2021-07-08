@@ -12,6 +12,7 @@ import { HeroComponent } from './components/homepage/hero/hero.component';
 import { ParallaxModule } from 'ngx-parallax';
 import { MainsectionComponent } from './components/homepage/mainsection/mainsection.component';
 import { TechcarouselComponent } from './components/homepage/techcarousel/techcarousel.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,13 @@ import { TechcarouselComponent } from './components/homepage/techcarousel/techca
     MainsectionComponent,
     TechcarouselComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ParallaxModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ParallaxModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
